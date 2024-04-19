@@ -9,6 +9,11 @@ req_string = f'https://api.openweathermap.org/data/2.5/weather?lat={os.getenv("L
 
 response = requests.get(req_string)
 
+
+if(not response.ok):
+   print(response.json())
+   exit()
+
 weather = response.json()
 
 
@@ -44,8 +49,12 @@ json_data = {
 
 response = requests.post('https://api.pawan.krd/v1/chat/completions', headers=headers, json=json_data)
 
-gpt_response = response.json()["choices"][0]["message"]["content"]
-print(gpt_response)
+if(response.ok):
+    gpt_response = response.json()["choices"][0]["message"]["content"]
+    print(gpt_response)
+else:
+    print(response.json())
+    exit()
 
 # api telegram
 req_string = f'https://api.telegram.org/bot{os.getenv("TELEGRAM_KEY")}/sendMessage?chat_id={os.getenv("CHAT_ID")}&text={gpt_response}'

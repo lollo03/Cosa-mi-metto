@@ -15,7 +15,7 @@ LAT = Latitudine
 LON = Longitudine
 TELEGRAM_KEY= Api key telegram 
 CHAT_ID= Chat id telegram
-SCHEDULED_TIME="08:00"
+SCHEDULED_TIME=08:00 //UTC TIME
 ```
 
 Canale telegram di esempio [AI Milan Weather Channel](https://t.me/aimilanweather)

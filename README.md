@@ -34,8 +34,8 @@ services:
         environment:
           - OW_KEY=
           - GPT_KEY=
-          - LAT = 45.4654219
-          - LON = 9.1859243
+          - LAT=45.4654219
+          - LON=9.1859243
           - TELEGRAM_KEY=
           - CHAT_ID=
           - SCHEDULED_TIME=06:00

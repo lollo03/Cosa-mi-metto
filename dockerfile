@@ -3,5 +3,5 @@ WORKDIR /app
 COPY src/requirements.txt ./
 RUN pip install -r requirements.txt
 COPY src /app\
-CMD ["echo", "avvio",  "container"]
+CMD ["echo", "avvio..."]
 CMD [ "python", "main.py" ]

@@ -72,4 +72,5 @@ schedule.every().day.at( os.getenv("SCHEDULED_TIME")).do(send_message)
 
 while 1:
     schedule.run_pending()
-    time.sleep(1)
+    print("alive")
+    time.sleep(10)

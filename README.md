@@ -19,3 +19,24 @@ SCHEDULED_TIME=08:00 //UTC TIME
 ```
 
 Canale telegram di esempio [AI Milan Weather Channel](https://t.me/aimilanweather)
+
+## Deploying 
+
+Il servizio può essere hostato tramite docker e docker-compose:
+
+```yaml
+name: cosa-mi-metto
+services:
+    server:
+        restart: unless-stopped
+        image: lollo03/cosa-mi-metto:main
+        tty: true 
+        environment:
+          - OW_KEY=
+          - GPT_KEY=
+          - LAT = 45.4654219
+          - LON = 9.1859243
+          - TELEGRAM_KEY=
+          - CHAT_ID=
+          - SCHEDULED_TIME=06:00
+```

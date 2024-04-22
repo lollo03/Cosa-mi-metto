@@ -68,7 +68,7 @@ def send_message():
 
 
 
-schedule.every().day.at(os.getenv("SCHEDULED_TIME")).do(send_message)
+schedule.every().day.at( str( os.getenv("SCHEDULED_TIME"))).do(send_message)
 
 while 1:
     schedule.run_pending()

@@ -67,8 +67,9 @@ def send_message():
     print(response.json())
 
 
-
-schedule.every().day.at( str( os.getenv("SCHEDULED_TIME"))).do(send_message)
+print(os.getenv("SCHEDULED_TIME"))
+print(type(os.getenv("SCHEDULED_TIME")))
+schedule.every().day.at( os.getenv("SCHEDULED_TIME")).do(send_message)
 
 while 1:
     schedule.run_pending()

@@ -65,12 +65,13 @@ def send_message():
     response = requests.get(req_string)
 
     print(response.json())
+    print("Messaggio mandato!", flush=True)
 
 
-print(f'Invio schedulato alle {os.getenv("SCHEDULED_TIME")}')
+print(f'Invio schedulato alle {os.getenv("SCHEDULED_TIME")}', flush=True)
 schedule.every().day.at( os.getenv("SCHEDULED_TIME")).do(send_message)
 
 while 1:
     schedule.run_pending()
-    print("alive")
+    print("alive", flush=True)
     time.sleep(10)

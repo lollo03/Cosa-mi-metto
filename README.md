@@ -29,7 +29,7 @@ name: cosa-mi-metto
 services:
     server:
         restart: unless-stopped
-        image: lollo03/cosa-mi-metto:main
+        image: lollo03/cosa-mi-metto
         tty: true 
         environment:
           - OW_KEY=

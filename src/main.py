@@ -67,8 +67,7 @@ def send_message():
     print(response.json())
 
 
-print(os.getenv("SCHEDULED_TIME"))
-print(type(os.getenv("SCHEDULED_TIME")))
+print(f'Invio schedulato alle {os.getenv("SCHEDULED_TIME")}')
 schedule.every().day.at( os.getenv("SCHEDULED_TIME")).do(send_message)
 
 while 1:
